@@ -1,6 +1,7 @@
-import Car from "../cars/Car";
-import Dashboard from "../cars/Dashboard";
-import About from "../cars/About";
+
+import Dashboard from "../Tequila/Dashboard";
+import About from "../Tequila/About";
+import Drinks from "../Tequila/Drinks";
 
 interface Routetype {
     path: string
@@ -14,8 +15,8 @@ interface Routetype {
 const routes: Routetype[] = [
     {
       path: "",
-      component: Car,
-      name: "Car List",
+      component: Drinks,
+      name: "Drink list ",
       protected: false
     },
     {
@@ -31,6 +32,9 @@ const routes: Routetype[] = [
       protected: false,
   
     },
+    
+     
+    
   ];
 
 export default routes 

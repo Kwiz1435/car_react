@@ -1,12 +1,12 @@
 export const server_calls ={
     get: async () => {
-        const response = await fetch('https://kiys-car-dealership.onrender.com/api/cars',
+        const response = await fetch('https://sassy-lucky-ellipse.glitch.me/api/drinks',
         {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Orgin': '*',
-                'x-access-token': 'bearer 9ebd3d71e2e1b0da27b886e40f68c9844517f6465ae8899f'
+                'x-access-token': 'bearer 502fa1b0457fa657e76361e75ed668490df152911bc233e4'
 
 
 
@@ -25,13 +25,13 @@ export const server_calls ={
     },
 
     create: async (data: any = {}) => {
-        const response = await fetch('https://kiys-car-dealership.onrender.com/api/cars',
+        const response = await fetch('https://sassy-lucky-ellipse.glitch.me/api/drinks',
         {
             method: "POST",
             headers:{
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Orgin': '*',
-                'x-access-token': 'bearer 9ebd3d71e2e1b0da27b886e40f68c9844517f6465ae8899f'
+                'x-access-token': 'bearer 502fa1b0457fa657e76361e75ed668490df152911bc233e4'
 
             },
             body: JSON.stringify(data)
@@ -45,13 +45,13 @@ export const server_calls ={
 
     },
     update: async (id:string, data: any = {}) => {
-        const response = await fetch (`https://kiys-car-dealership.onrender.com/api/cars/${id}`,
+        const response = await fetch (`https://sassy-lucky-ellipse.glitch.me/api/drinks/${id}`,
         {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Orgin': '*',
-                'x-access-token': 'bearer 9ebd3d71e2e1b0da27b886e40f68c9844517f6465ae8899f'
+                'x-access-token': 'bearer 502fa1b0457fa657e76361e75ed668490df152911bc233e4'
             },
         
 
@@ -68,12 +68,12 @@ export const server_calls ={
     },
   
     delete: async (id: string) => {
-            const response = await fetch(`https://kiys-car-dealership.onrender.com/api/cars/${id}`,
+            const response = await fetch(`https://sassy-lucky-ellipse.glitch.me/api/drinks/${id}`,
                 {
                     method: "DELETE",
                     headers: {
                         'Content-Type': 'application/json',
-                        'x-access-token': 'bearer 9ebd3d71e2e1b0da27b886e40f68c9844517f6465ae8899f'
+                        'x-access-token': 'bearer 502fa1b0457fa657e76361e75ed668490df152911bc233e4'
                     }
                 })
 

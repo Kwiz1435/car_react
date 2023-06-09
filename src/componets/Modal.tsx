@@ -1,6 +1,6 @@
 import React from 'react'
-import CarForm from './CarForm';
-import NewCars from './CarForm';
+import DrinkForm from './DrinkForm';
+import NewDrinks from './DrinkForm';
 
 type Props  = {
     id?: string[];
@@ -34,7 +34,7 @@ const Modal = ( props: Props ) => {
 
                 </div>
                 <div className="flex flex-col items-center text-center mt-3p-2">
-                  <CarForm id={props.id} />
+                  <DrinkForm id={props.id} />
                 </div>
 
             

@@ -3,15 +3,15 @@ import input from "./input"
 import { useForm } from 'react-hook-form'
 import { server_calls } from '../api/server'
 import { useDispatch, useStore } from 'react-redux';
-import { chooseName, choosePrice, chooseYear, chooseModel, chooseDescription, chooseCarQuality} from "../redux/slices/Rootslice";
+import { chooseName,  chooseMake, choosePrice, chooseAged, } from "../redux/slices/Rootslice";
 
-interface CarFormProps{
+interface DrinkFormProps{
     id?:string[]
    
 
 }
 
-const CarForm = (props:CarFormProps) => {
+const DrinkForm = (props:DrinkFormProps) => {
     const{ register,handleSubmit } = useForm({})
     const dispatch = useDispatch();
     const store = useStore();
@@ -31,11 +31,10 @@ const CarForm = (props:CarFormProps) => {
        } else {
         //use dispatch to update our state in our store
         dispatch(chooseName(data.name));
-        dispatch(chooseYear(data.year));
-        dispatch(chooseModel(data.model));
-        dispatch(chooseDescription(data.description));
+        dispatch(chooseAged(data.aged));
+        dispatch(chooseMake(data.make));
         dispatch(choosePrice(data.price));
-        dispatch(chooseCarQuality(data.car_quailty));
+   
 
         server_calls.create(store.getState())
         setTimeout( () => {window.location.reload()}, 1000);
@@ -59,21 +58,15 @@ const CarForm = (props:CarFormProps) => {
                 <input {...register('price')} name='price' placeholder="price"/>
             </div>
             <div>
-                <label htmlFor='year'>Year</label>
-                <input {...register('year')} name='year' placeholder="year"/>
+                <label htmlFor='make'>Make</label>
+                <input {...register('make')} name='make' placeholder="make"/>
             </div>
             <div>
-                <label htmlFor='model'>Model</label>
-                <input {...register('model')} name='model' placeholder="model"/>
+                <label htmlFor='aged'>Aged</label>
+                <input {...register('aged')} name='aged' placeholder="aged"/>
             </div>
-            <div>
-                <label htmlFor="description">Description</label>
-                <input {...register('description')} name='description' placeholder="description"/>
-            </div>
-            <div>
-                <label htmlFor="car_quality">Car Quality</label>
-                <input {...register('car_quality')} name='car_quality' placeholder="car_quality"/>
-            </div>
+           
+            
             <div className="flex p-1">
                 <Button
                 className="flex justify-start m-3 bg-slate-300 p-2 rounded hover:bg-slate-800 text-white">
@@ -87,4 +80,4 @@ const CarForm = (props:CarFormProps) => {
   )
 }
 
-export default CarForm
+export default DrinkForm

@@ -1,11 +1,20 @@
+// Import the functions you need from the SDKs you need
 
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export const firebaseConfig = {
-  apiKey: "AIzaSyAng6xxzn3ihK0FIgtAm1f5ri3DSypzMfQ",
-  authDomain: "react-car-inventory-1435.firebaseapp.com",
-  projectId: "react-car-inventory-1435",
-  storageBucket: "react-car-inventory-1435.appspot.com",
-  messagingSenderId: "677197771947",
-  appId: "1:677197771947:web:94ecad1f1a7ef3df47b3ee",
-  measurementId: "G-PV7GLQ3DYJ"
+  apiKey: "AIzaSyBSqkOcha0BdHB4HPcK9goapqgxn8lDQyg",
+  authDomain: "drink-app-cf569.firebaseapp.com",
+  projectId: "drink-app-cf569",
+  storageBucket: "drink-app-cf569.appspot.com",
+  messagingSenderId: "155033749804",
+  appId: "1:155033749804:web:c55008684cd32bfa6fc489",
+  measurementId: "G-9L32G6SB9W"
 };
+
+// Initialize Firebase
+
 

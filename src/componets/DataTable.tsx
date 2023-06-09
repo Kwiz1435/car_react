@@ -9,16 +9,16 @@ import { useGetData } from '../custom-hooks/FetchData';
 const columns: GridColDef[] = [
    { field: 'id', headerName: 'ID', width: 98, hide:true},
    { field: 'name', headerName: 'Name', flex: 1},
-   { field: 'year', headerName: 'Year', flex: 1},
-   { field: 'car_quality',headerName: 'Car Quality',flex: 1},
-   { field: "model", headerName: 'Model',flex: 2},
-   { field: "description", headerName: 'Description',flex: 2}
+   { field: 'make', headerName: 'Make', flex: 1},
+   { field: 'aged',headerName: 'Aged',flex: 1},
+   { field: "price", headerName: 'price',flex: 2},
+
 
 ]
 
 function DataTable() {
    const [ open, setOpen ] = useState(false);
-   const {carsData, getData } = useGetData();
+   const {DrinksData, getData} = useGetData();
    const [ selectionModel, setSelectionModel ] = useState<string[]>([])
    
 
@@ -51,7 +51,7 @@ function DataTable() {
                <button className ='p-3 bg-slate-300 rounded hover:bg-slate-800 hover:text-white '
                onClick={() => handleOpen()}
                >
-                See New Cars
+                Make your own drink!
                </button>
             </div>
            
@@ -65,8 +65,8 @@ function DataTable() {
         <div className={ open ? "hidden" : "container mx-10 my-5 flex flex-col"}
             style={{ height: 400, width: '100%'}}
             >
-                <h2 className="p-3 bg-slate-300 my-2 rounded">Kiy's Cars</h2>
-                <DataGrid rows={carsData} columns={columns} rowsPerPageOptions={[5]}
+                <h2 className="p-3 bg-slate-300 my-2 rounded">Come Drink with us!</h2>
+                <DataGrid rows={DrinksData} columns={columns} rowsPerPageOptions={[5]}
                 checkboxSelection={true} 
                 onSelectionModelChange ={ ( item:any) => {
                     setSelectionModel(item)
@@ -82,3 +82,7 @@ function DataTable() {
 }
 
 export default DataTable
+
+function getData() {
+    throw new Error('Function not implemented.');
+}

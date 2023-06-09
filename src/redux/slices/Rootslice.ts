@@ -5,10 +5,9 @@ const rootSlice = createSlice({
     initialState:{
         name: "Name",
        price:"Price",
-        year:"Year",
-       model:"Model",
-       description:"Description",
-       car_quality:"Car quality "
+        aged:"Aged",
+        make:"Make",
+       
 
 
 
@@ -16,10 +15,9 @@ const rootSlice = createSlice({
     reducers:{
         chooseName: (state, action) => { state.name = action.payload},
         choosePrice: (state, action) => { state.price = action.payload},
-        chooseModel: (state, action) => { state.model = action.payload},
-        chooseDescription: (state, action) => { state.description = action.payload},
-        chooseYear: (state, action) => { state.year = action.payload},
-        chooseCarQuality: (state, action) => { state.car_quality = action.payload},
+        chooseAged: (state, action) => { state.aged = action.payload},
+        chooseMake: (state, action) => { state.make = action.payload},
+        
 
 
 
@@ -28,4 +26,4 @@ const rootSlice = createSlice({
 })
 
 export const reducer = rootSlice.reducer;
-export const { chooseName, choosePrice, chooseModel, chooseDescription, chooseYear, chooseCarQuality} = rootSlice.actions
+export const { chooseName, choosePrice, chooseMake, chooseAged, } = rootSlice.actions

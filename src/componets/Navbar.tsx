@@ -33,7 +33,7 @@ function Navbar() {
      
         <div
             className='flex items-center flex-shrink-0 text-white mr-6'>
-                <Link to='/' className='font-semibold text-xl tracking-tight'>Kiy's Cars</Link>
+                <Link to='/' className='font-semibold text-xl tracking-tight'>Kiy's Drink Club</Link>
 
         </div>
         <div className='block'>
@@ -54,7 +54,7 @@ function Navbar() {
             <Button className='p-3 m-5 bg-teal-400 justify-center'>
                     <div>
                        <Link to='/' onClick={ clicked }className='flex place-item-center mt-4 lg:inline-block lg:mt-0
-                       text-teal-200 hover:text-white mr-4'>Cars</Link>
+                       text-teal-200 hover:text-white mr-4'>Drinks</Link>
                     </div>
 
                 </Button>
@@ -72,6 +72,17 @@ function Navbar() {
                     </div>
 
                 </Button>
+                <Button className='p-3 m-5 bg-teal-400 justify-center'>
+                    <div>
+                       <Link to='/Dashboard' onClick={ clicked }className='flex place-item-center mt-4 lg:inline-block lg:mt-0
+                       text-teal-200 hover:text-white mr-4'>Cocktails</Link>
+                    </div>
+
+                </Button>
+
+
+
+
                 {
                   !auth.currentUser ?
                   <Button className='p-3 m-5 bg-teal-400 justify-center'>
